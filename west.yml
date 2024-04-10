@@ -8,12 +8,21 @@ manifest:
   remotes:
     - name: xentroops
       url-base: https://github.com/xen-troops/
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: ddone
+      url-base: https://github.com/Deedone
 
   projects:
     - name: zephyr
-      remote: xentroops
-      revision: zephyr-v3.3.0-xt
+      remote: ddone
+      revision: zephyr-v3.6.0-xt-v7
       west-commands: scripts/west-commands.yml
+
     - name: zephyr-xenlib
-      remote: xentroops
-      revision: main
+      remote: ddone
+      revision: wip_zephyr_3.6-v2
+
+    - name: zephyr-optee-client
+      remote: ddone
+      revision: wip_zephyr_3.6-v1
